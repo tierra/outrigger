@@ -3,9 +3,11 @@ module Outrigger
     def self.included(base)
       base.extend(ClassMethods)
 
+      # rubocop:disable Lint/NestedMethodDefinition
       def tags
         self.class.tags
       end
+      # rubocop:enable Lint/NestedMethodDefinition
     end
 
     module ClassMethods
